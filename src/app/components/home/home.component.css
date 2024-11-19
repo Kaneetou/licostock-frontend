@@ -1,0 +1,17 @@
+.main-content {
+    padding: 20px;
+    background-color: #f4f4f4; /* Fondo claro para el contenido */
+    flex: 1; /* Permite que el contenido principal ocupe el espacio restante */
+  }
+  
+  .layout {
+    display: flex; /* Flexbox para organizar el layout */
+    flex-direction: column; /* Dirección vertical */
+    height: 100vh; /* Altura completa */
+  }
+  
+  .content {
+    display: flex; /* Flexbox para el contenido */
+    flex: 1; /* Ocupa el espacio restante */
+  }
+

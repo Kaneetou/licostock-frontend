@@ -1,0 +1,32 @@
+<router-outlet>
+  <div class="login-wrapper">
+      <!-- Contenedor de texto explicativo -->
+      <div class="info-container">
+          <h2>Bienvenido al Sistema</h2>
+          <p>Con nuestra plataforma, podrás gestionar tus compras y ventas de manera rápida y sencilla. Mantén tus registros organizados y consulta tus transacciones de forma eficiente.</p>
+          <ul>
+              <li><strong>Gestión eficiente:</strong> Mantén un control preciso de tus compras y ventas.</li>
+              <li><strong>Acceso rápido:</strong> Inicia sesión con facilidad para tener toda tu información al alcance.</li>
+              <li><strong>Interfaz amigable:</strong> Una interfaz simple y clara para facilitar tu experiencia.</li>
+          </ul>
+      </div>
+
+      <!-- Contenedor del formulario de login -->
+      <div class="login-container">
+          <h2>Iniciar Sesión</h2>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                  <label for="email">Usuario</label>
+                  <input type="text" id="email" formControlName="email" placeholder="Ingrese su email" />
+              </div>
+
+              <div class="form-group">
+                  <label for="contraseña">Contraseña</label>
+                  <input type="password" id="contraseña" formControlName="contraseña" placeholder="Ingrese su contraseña" />
+              </div>
+
+              <button type="submit" [disabled]="loginForm.invalid">Iniciar Sesión</button>
+          </form>
+      </div>
+  </div>
+</router-outlet>

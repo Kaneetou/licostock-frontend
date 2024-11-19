@@ -1,0 +1,165 @@
+/* Fondo oscuro para todo el cuerpo */
+body {
+  background-color: #343a40; /* Fondo oscuro */
+  color: #f8f9fa; /* Texto claro para contraste */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal que agrupa ambos elementos */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+  background-color: #343a40; /* Fondo oscuro */
+}
+
+/* Estilo para el contenedor de información */
+.info-container {
+  width: 40%;
+  padding: 30px;
+  margin-right: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  color: #333; /* Texto oscuro para el contenido */
+}
+
+/* Título de la sección de información */
+.info-container h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #28a745; /* Verde para título */
+  margin-bottom: 15px;
+}
+
+/* Párrafo de la información */
+.info-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Lista de beneficios */
+.info-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-container ul li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.info-container ul li strong {
+  color: #007bff;
+}
+
+/* Contenedor del login */
+.login-container {
+  width: 360px;
+  padding: 30px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 15px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del formulario */
+h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+/* Estilo para el grupo de los campos */
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilo de las etiquetas */
+label {
+  display: block;
+  font-size: 14px;
+  color: #6c757d; /* Color neutro para las etiquetas */
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+/* Estilo de los inputs */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da; /* Color de borde suave */
+  border-radius: 8px;
+  font-size: 16px;
+  color: #495057; /* Color de texto oscuro */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Foco en los inputs */
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+  border-color: #17a2b8; /* Color azul para el foco */
+  box-shadow: 0px 0px 8px rgba(23, 162, 184, 0.3); /* Sombra suave */
+}
+
+/* Estilo del botón */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745; /* Verde para el botón */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+/* Estilo del botón deshabilitado */
+button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+/* Estilo del botón al pasar el ratón */
+button:hover:not(:disabled) {
+  background-color: #218838; /* Verde más oscuro para hover */
+}
+
+/* Mensaje de error */
+.error-message {
+  color: #dc3545; /* Rojo para los mensajes de error */
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Diseño para dispositivos móviles */
+@media (max-width: 768px) {
+  .login-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .info-container {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .login-container {
+      width: 100%;
+  }
+}

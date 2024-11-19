@@ -1,0 +1,64 @@
+<div class="proveedor-container">
+    <h2>Gestión de Proveedores</h2>
+  
+    <div class="agregar-proveedor">
+      <h3>Agregar Nuevo Proveedor</h3>
+      <div class="form-group">
+        <label for="nombreProveedor">Nombre del Proveedor</label>
+        <input type="text" [(ngModel)]="nuevoProveedor.nombreProveedor" placeholder="Nombre del proveedor" />
+      </div>
+      <div class="form-group">
+        <label for="telefonoProveedor">Teléfono</label>
+        <input type="text" [(ngModel)]="nuevoProveedor.telefonoProveedor" placeholder="Teléfono del proveedor" />
+      </div>
+      <div class="form-group">
+        <label for="emailProveedor">Email</label>
+        <input type="email" [(ngModel)]="nuevoProveedor.emailProveedor" placeholder="Email del proveedor" />
+      </div>
+      <button (click)="agregarProveedor()">Agregar Proveedor</button>
+    </div>
+  
+    <div class="proveedores-lista">
+      <h3>Lista de Proveedores</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let proveedor of proveedores">
+            <td>{{ proveedor.nombreProveedor }}</td>
+            <td>{{ proveedor.telefonoProveedor }}</td>
+            <td>{{ proveedor.emailProveedor }}</td>
+            <td>
+              <button (click)="iniciarEdicion(proveedor)">Editar</button>
+              <button (click)="eliminarProveedor(proveedor.id)">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="isEditando" class="editar-proveedor">
+      <h3>Editar Proveedor</h3>
+      <div class="form-group">
+        <label for="nombreProveedor">Nombre del Proveedor</label>
+        <input type="text" [(ngModel)]="proveedorEditado.nombreProveedor" placeholder="Nombre del proveedor" />
+      </div>
+      <div class="form-group">
+        <label for="telefonoProveedor">Teléfono</label>
+        <input type="text" [(ngModel)]="proveedorEditado.telefonoProveedor" placeholder="Teléfono del proveedor" />
+      </div>
+      <div class="form-group">
+        <label for="emailProveedor">Email</label>
+        <input type="email" [(ngModel)]="proveedorEditado.emailProveedor" placeholder="Email del proveedor" />
+      </div>
+      <button (click)="editarProveedor()">Actualizar Proveedor</button>
+      <button (click)="cancelarEdicion()">Cancelar</button>
+    </div>
+  </div>
+  

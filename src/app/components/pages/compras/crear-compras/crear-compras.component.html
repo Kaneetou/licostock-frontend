@@ -1,0 +1,36 @@
+<div class="crear-compra">
+    <h2>Crear Compra</h2>
+  
+    <div class="form-group">
+      <label for="idProducto">ID Producto</label>
+      <input type="number" [(ngModel)]="idProducto" placeholder="ID del Producto" />
+    </div>
+  
+    <div class="form-group">
+      <label for="cantidadCompra">Cantidad</label>
+      <input type="number" [(ngModel)]="cantidadCompra" placeholder="Cantidad de Producto" />
+    </div>
+  
+    <button (click)="agregarDetalle()">Agregar Detalle</button>
+  
+    <div class="detalles-lista">
+      <h3>Detalles de la Compra</h3>
+      <table>
+        <tr>
+          <th>ID Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Total</th>
+        </tr>
+        <tr *ngFor="let detalle of detalles">
+          <td>{{ detalle.idProducto }}</td>
+          <td>{{ detalle.cantidadCompra }}</td>
+          <td>{{ detalle.precioUnitario }}</td>
+          <td>{{ detalle.cantidadCompra * detalle.precioUnitario | currency }}</td>
+        </tr>
+      </table>
+      <h4>Total de la Compra: {{ totalCompra | currency }}</h4>
+    </div>
+  
+    <button (click)="guardarCompra()">Guardar Compra</button>
+  </div>

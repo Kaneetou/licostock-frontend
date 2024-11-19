@@ -1,0 +1,113 @@
+.contenedor-tabla {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Fondo gris claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco para la tabla */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+table thead tr {
+  background-color: #495057; /* Gris oscuro para el encabezado */
+  color: #ffffff; /* Texto blanco para mayor contraste */
+  text-align: left;
+  font-weight: bold;
+}
+
+table th,
+table td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border: 1px solid #ddd; /* Borde gris claro */
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fondo gris muy claro para las filas pares */
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Fondo blanco para las filas impares */
+}
+
+table tbody tr:hover {
+  background-color: #e9ecef; /* Fondo claro al pasar el mouse */
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  background-color: #4CAF50; /* Botón de acción en verde */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-width: 100px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+button[ng-reflect-ng-class="editar"] {
+  background-color: #f5c71a; /* Amarillo para editar */
+}
+
+button[ng-reflect-ng-class="eliminar"] {
+  background-color: #ff4747; /* Rojo para eliminar */
+}
+
+button[ng-reflect-ng-class="guardar"] {
+  background-color: #28a745; /* Verde para guardar */
+}
+
+button[ng-reflect-ng-class="cancelar"] {
+  background-color: #6c757d; /* Gris neutro para cancelar */
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+form input,
+form button[type="submit"] {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+  color: #495057; /* Gris oscuro para el texto */
+  background-color: #ffffff; /* Fondo blanco */
+  width: 100%;
+  max-width: 250px;
+}
+
+form button[type="submit"] {
+  background-color: #f5c71a; /* Amarillo cálido para el botón de enviar */
+  color: #495057; /* Gris oscuro para el texto */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #d4af37; /* Amarillo más oscuro al hacer hover */
+}

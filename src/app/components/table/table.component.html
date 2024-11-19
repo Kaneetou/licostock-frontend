@@ -1,0 +1,52 @@
+
+  <div class="contenedor-tabla">
+    <!-- Formulario para agregar un nuevo producto -->
+    <form [formGroup]="productoForm" (ngSubmit)="agregarProducto()">
+      <input formControlName="nombreProducto" placeholder="Nombre del Producto" />
+      <input formControlName="precioCompra" placeholder="Precio de Compra" type="number" />
+      <input formControlName="precioVenta" placeholder="Precio de Venta" type="number" />
+      <input formControlName="stockActual" placeholder="Stock" type="number" />
+      <input formControlName="idProveedor" placeholder="ID del Proveedor" type="number" />
+      <button type="submit">Agregar Producto</button>
+    </form>
+  
+    <!-- Tabla para mostrar productos -->
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio Compra</th>
+          <th>Precio Venta</th>
+          <th>Stock</th>
+          <th>ID Proveedor</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of productos">
+          <td>{{ producto.nombreProducto }}</td>
+          <td>{{ producto.precioCompra }}</td>
+          <td>{{ producto.precioVenta }}</td>
+          <td>{{ producto.stockActual }}</td>
+          <td>{{ producto.idProveedor }}</td>
+          <td>
+            <button (click)="editarProducto(producto)" ng-reflect-ng-class="editar">Editar</button>
+            <button (click)="eliminarProducto(producto.id)" ng-reflect-ng-class="eliminar">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Formulario para editar un producto -->
+    <form *ngIf="productoSeleccionado" [formGroup]="productoForm" (ngSubmit)="guardarEdicion()">
+      <input formControlName="nombreProducto" placeholder="Nombre del Producto" />
+      <input formControlName="precioCompra" placeholder="Precio de Compra" type="number" />
+      <input formControlName="precioVenta" placeholder="Precio de Venta" type="number" />
+      <input formControlName="stockActual" placeholder="Stock" type="number" />
+      <input formControlName="idProveedor" placeholder="ID del Proveedor" type="number" />
+      <button type="submit" ng-reflect-ng-class="guardar">Guardar Cambios</button>
+      <button type="button" (click)="cancelarEdicion()" ng-reflect-ng-class="cancelar">Cancelar</button>
+    </form>
+  </div>
+  
+  <router-outlet></router-outlet>

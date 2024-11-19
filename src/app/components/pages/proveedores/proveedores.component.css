@@ -1,0 +1,98 @@
+.proveedor-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .proveedor-container h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .agregar-proveedor, .editar-proveedor {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .agregar-proveedor h3, .editar-proveedor h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .form-group input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  button {
+    padding: 0.8rem;
+    background-color: #4CAF50; /* Botón verde */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 1rem;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .proveedores-lista {
+    margin-top: 2rem;
+  }
+  
+  .proveedores-lista table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  .proveedores-lista th,
+  .proveedores-lista td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .proveedores-lista th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .proveedores-lista tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    background-color: #f44336; /* Rojo para eliminar */
+  }
+  
+  button:hover {
+    background-color: #d32f2f;
+  }
+  

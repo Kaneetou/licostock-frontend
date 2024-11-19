@@ -1,0 +1,74 @@
+<div class="layout">
+  <app-header></app-header>
+  <div class="content">
+    <app-sidebar></app-sidebar>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div> 
+
+<!--
+<div class="layout">
+  <app-header></app-header>
+  <div class="content">
+    <app-sidebar></app-sidebar>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+      
+      <div class="inicio">
+        <h2>Resumen de Compras y Ventas</h2>
+
+        <div class="estadisticas">
+          <div class="estadistica">
+            <h3>Total Compras</h3>
+            <p>{{ totalCompras | currency }}</p>
+          </div>
+          <div class="estadistica">
+            <h3>Total Ventas</h3>
+            <p>{{ totalVentas | currency }}</p>
+          </div>
+        </div>
+
+        <div class="lista-compras">
+          <h3>Compras Recientes</h3>
+          <table *ngIf="compras.length">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Proveedor</th>
+                <th>Monto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let compra of compras">
+                <td>{{ compra.fecha }}</td>
+                <td>{{ compra.proveedor }}</td>
+                <td>{{ compra.monto | currency }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p *ngIf="compras.length === 0">No hay compras recientes.</p>
+        </div>
+
+        <div class="lista-ventas">
+          <h3>Ventas Recientes</h3>
+          <table *ngIf="ventas.length">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Monto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let venta of ventas">
+                <td>{{ venta.fecha }}</td>
+                <td>{{ venta.cliente }}</td>
+                <td>{{ venta.monto | currency }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <p *ngIf="ventas.length === 0">No hay ventas recientes.</p>
+          -->
+        

@@ -1,0 +1,17 @@
+<div class="inicio">
+  <h2>Resumen de Compras y Ventas</h2>
+
+  <div class="estadisticas">
+    <div class="estadistica">
+      <h3>Total Compras</h3>
+      <p>{{ totalCompras | currency }}</p>
+    </div>
+    <div class="estadistica">
+      <h3>Total Ventas</h3>
+      <p>{{ totalVentas | currency }}</p>
+    </div>
+  </div>
+
+  <app-listar-compras (totalComprasEmitido)="actualizarTotalCompras($event)"></app-listar-compras>
+  <app-listar-ventas (totalVentasEmitido)="actualizarTotalVentas($event)"></app-listar-ventas>
+</div>

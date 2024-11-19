@@ -1,0 +1,94 @@
+.crear-Venta {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.crear-Venta h2 {
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.crear-Venta .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.crear-Venta .form-group label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.crear-Venta .form-group input {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.crear-Venta button {
+    padding: 0.8rem;
+    background-color: #4CAF50; /* Botón de acción en verde */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.crear-Venta button:hover {
+    background-color: #45a049;
+}
+
+.detalles-lista {
+    margin-top: 2rem;
+}
+
+.detalles-lista h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.detalles-lista table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.detalles-lista th,
+.detalles-lista td {
+    padding: 0.8rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.detalles-lista th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.detalles-lista tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.detalles-lista h4 {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: right;
+    margin-top: 1rem;
+}
